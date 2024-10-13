@@ -2,7 +2,7 @@ module Task1;
  // implement the circuit
   reg signed [7:0] A, B;
   wire signed [7:0] C;
-  AndUnit andUnit(A, B, C);
+  OrUnit orUnit(A, B, C);
 
   // test
   initial begin
@@ -28,7 +28,7 @@ module Task1;
   end
 
   // gtkWave
-  initial begin
+  initial begin 
     $dumpfile("task1.vcd");
     $dumpvars(0, Task1);
   end
@@ -36,11 +36,11 @@ module Task1;
 endmodule
 
 
-module AndUnit(A, B, C);
+module OrUnit8(A, B, C);
   input signed [7:0] A, B;
   output signed [7:0] C;
 
-  // if we are using assign, C should be a wire.
-  // if we are using always block, C should be output reg.
-  assign C = A & B;
+  assign C = A | B;
 endmodule
+
+

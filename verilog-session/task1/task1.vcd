@@ -1,5 +1,5 @@
 $date
-	Sun Oct 13 12:11:36 2024
+	Sun Oct 13 12:16:10 2024
 $end
 $version
 	Icarus Verilog
@@ -11,7 +11,7 @@ $scope module Task1 $end
 $var wire 8 ! C [7:0] $end
 $var reg 8 " A [7:0] $end
 $var reg 8 # B [7:0] $end
-$scope module andUnit $end
+$scope module orUnit $end
 $var wire 8 $ A [7:0] $end
 $var wire 8 % B [7:0] $end
 $var wire 8 & C [7:0] $end
@@ -23,21 +23,23 @@ $dumpall
 $end
 #0
 $dumpvars
-b0 &
+b1 &
 b0 %
 b1 $
 b0 #
 b1 "
-b0 !
+b1 !
 $end
 #5
+b11011110 !
+b11011110 &
 b1010 #
 b1010 %
 b11010100 "
 b11010100 $
 #10
-b1011 !
-b1011 &
+b1111 !
+b1111 &
 b1011 #
 b1011 %
 b1111 "
