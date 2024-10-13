@@ -7,44 +7,48 @@
 :vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
 :vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
 :vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
-S_000002240e5791e0 .scope module, "TestForward" "TestForward" 2 4;
+S_0000021375899400 .scope module, "TestForward" "TestForward" 2 4;
  .timescale 0 0;
-v000002240e57ee60_0 .var "data2", 7 0;
-v000002240e5797d0_0 .net "result", 7 0, L_000002240e579870;  1 drivers
-S_000002240e445440 .scope module, "forward" "Forward" 2 8, 3 1 0, S_000002240e5791e0;
+v00000213758980f0_0 .var "data2", 7 0;
+v00000213758999f0_0 .net "result", 7 0, L_0000021375899a90;  1 drivers
+S_00000213758e5440 .scope module, "forward" "Forward" 2 8, 3 1 0, S_0000021375899400;
  .timescale 0 0;
     .port_info 0 /INPUT 8 "data2";
     .port_info 1 /OUTPUT 8 "result";
-L_000002240e579870 .functor BUFZ 8, v000002240e57ee60_0, C4<00000000>, C4<00000000>, C4<00000000>;
-v000002240e579370_0 .net "data2", 7 0, v000002240e57ee60_0;  1 drivers
-v000002240e412f90_0 .net "result", 7 0, L_000002240e579870;  alias, 1 drivers
-    .scope S_000002240e5791e0;
+L_0000021375899a90/d .functor BUFZ 8, v00000213758980f0_0, C4<00000000>, C4<00000000>, C4<00000000>;
+L_0000021375899a90 .delay 8 (1,1,1) L_0000021375899a90/d;
+v0000021375899590_0 .net "data2", 7 0, v00000213758980f0_0;  1 drivers
+v00000213758b2f90_0 .net "result", 7 0, L_0000021375899a90;  alias, 1 drivers
+    .scope S_0000021375899400;
 T_0 ;
-    %delay 1, 0;
+    %delay 3, 0;
     %pushi/vec4 25, 0, 8;
-    %store/vec4 v000002240e57ee60_0, 0, 8;
-    %delay 1, 0;
+    %store/vec4 v00000213758980f0_0, 0, 8;
+    %delay 3, 0;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000213758980f0_0, 0, 8;
+    %delay 3, 0;
     %pushi/vec4 1, 0, 8;
-    %store/vec4 v000002240e57ee60_0, 0, 8;
-    %delay 1, 0;
+    %store/vec4 v00000213758980f0_0, 0, 8;
+    %delay 3, 0;
     %pushi/vec4 34, 0, 8;
-    %store/vec4 v000002240e57ee60_0, 0, 8;
+    %store/vec4 v00000213758980f0_0, 0, 8;
     %delay 5, 0;
-    %vpi_call 2 22 "$finish" {0 0 0};
+    %vpi_call 2 25 "$finish" {0 0 0};
     %end;
     .thread T_0;
-    .scope S_000002240e5791e0;
+    .scope S_0000021375899400;
 T_1 ;
-    %vpi_call 2 28 "$dumpfile", "TestForward.vcd" {0 0 0};
-    %vpi_call 2 29 "$dumpvars", 32'sb00000000000000000000000000000000, S_000002240e5791e0 {0 0 0};
+    %vpi_call 2 31 "$dumpfile", "TestForward.vcd" {0 0 0};
+    %vpi_call 2 32 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000021375899400 {0 0 0};
     %end;
     .thread T_1;
-    .scope S_000002240e5791e0;
+    .scope S_0000021375899400;
 T_2 ;
-    %vpi_call 2 34 "$display" {0 0 0};
-    %vpi_call 2 35 "$display", "********************  TEST Forward  ********************" {0 0 0};
-    %vpi_call 2 36 "$display", "\011time\011data2\011result" {0 0 0};
-    %vpi_call 2 37 "$monitor", "\011%3t\011%d\011%d", $time, v000002240e57ee60_0, v000002240e5797d0_0 {0 0 0};
+    %vpi_call 2 37 "$display" {0 0 0};
+    %vpi_call 2 38 "$display", "********************  TEST Forward  ********************" {0 0 0};
+    %vpi_call 2 39 "$display", "\011time\011data2\011result" {0 0 0};
+    %vpi_call 2 40 "$monitor", "\011%3t\011%d\011%d", $time, v00000213758980f0_0, v00000213758999f0_0 {0 0 0};
     %end;
     .thread T_2;
 # The file index is used to find the file name in the following table.

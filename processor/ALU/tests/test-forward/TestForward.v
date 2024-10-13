@@ -9,13 +9,16 @@ module TestForward;
 
   // test
   initial begin
-    #1
+    #3
     data2 = 25;
 
-    #1
+    #3
+    data2 = 0;
+
+    #3
     data2 = 1;
 
-    #1
+    #3
     data2 = 34;
     
     #5

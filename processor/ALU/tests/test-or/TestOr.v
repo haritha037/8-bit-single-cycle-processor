@@ -14,15 +14,15 @@ module TestOr;
     data1 = 25;
     data2 = 3;
 
-    #1
+    #3
     data1 = 1;
     data2 = 8;
 
-    #1
+    #4
     data1 = 2;
     data2 = -5;
 
-    #1
+    #4
     data1 = 6;
     data2 = -2;
 
