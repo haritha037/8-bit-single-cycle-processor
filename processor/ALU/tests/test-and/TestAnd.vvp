@@ -1,0 +1,68 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000220292b9da0 .scope module, "TestAnd" "TestAnd" 2 4;
+ .timescale 0 0;
+v0000022029175860_0 .var/s "data1", 7 0;
+v0000022029175900_0 .var/s "data2", 7 0;
+v00000220291759a0_0 .net/s "result", 7 0, L_0000022029175a40;  1 drivers
+S_0000022029175630 .scope module, "andUnit" "And" 2 9, 3 1 0, S_00000220292b9da0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "data1";
+    .port_info 1 /INPUT 8 "data2";
+    .port_info 2 /OUTPUT 8 "result";
+L_0000022029175a40 .functor AND 8, v0000022029175860_0, v0000022029175900_0, C4<11111111>, C4<11111111>;
+v00000220292b9b40_0 .net "data1", 7 0, v0000022029175860_0;  1 drivers
+v0000022029142f90_0 .net "data2", 7 0, v0000022029175900_0;  1 drivers
+v00000220291757c0_0 .net "result", 7 0, L_0000022029175a40;  alias, 1 drivers
+    .scope S_00000220292b9da0;
+T_0 ;
+    %delay 1, 0;
+    %pushi/vec4 25, 0, 8;
+    %store/vec4 v0000022029175860_0, 0, 8;
+    %pushi/vec4 3, 0, 8;
+    %store/vec4 v0000022029175900_0, 0, 8;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v0000022029175860_0, 0, 8;
+    %pushi/vec4 8, 0, 8;
+    %store/vec4 v0000022029175900_0, 0, 8;
+    %delay 1, 0;
+    %pushi/vec4 2, 0, 8;
+    %store/vec4 v0000022029175860_0, 0, 8;
+    %pushi/vec4 251, 0, 8;
+    %store/vec4 v0000022029175900_0, 0, 8;
+    %delay 1, 0;
+    %pushi/vec4 6, 0, 8;
+    %store/vec4 v0000022029175860_0, 0, 8;
+    %pushi/vec4 254, 0, 8;
+    %store/vec4 v0000022029175900_0, 0, 8;
+    %delay 5, 0;
+    %vpi_call 2 30 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_00000220292b9da0;
+T_1 ;
+    %vpi_call 2 36 "$dumpfile", "TestAnd.vcd" {0 0 0};
+    %vpi_call 2 37 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000220292b9da0 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_00000220292b9da0;
+T_2 ;
+    %vpi_call 2 42 "$display" {0 0 0};
+    %vpi_call 2 43 "$display", "********************  TEST And  ********************" {0 0 0};
+    %vpi_call 2 46 "$monitor", "t=%3d\012data1:\011%b\012data2:\011%b\012result:\011%b\012\012", $time, v0000022029175860_0, v0000022029175900_0, v00000220291759a0_0 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "TestAnd.v";
+    "./../../units/And.v";
