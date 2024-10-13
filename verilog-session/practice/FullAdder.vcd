@@ -1,0 +1,36 @@
+$date
+	Sun Oct 13 11:32:38 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module TestBench $end
+$var wire 1 ! s $end
+$var wire 1 " cOut $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$var reg 1 % cIn $end
+$scope module fullAdder $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 % cIn $end
+$var reg 1 " cOut $end
+$var reg 1 ! s $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0%
+0$
+0#
+0"
+0!
+$end
+#10
