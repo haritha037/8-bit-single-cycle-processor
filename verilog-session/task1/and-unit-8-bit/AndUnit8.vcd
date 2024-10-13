@@ -1,0 +1,45 @@
+$date
+	Sun Oct 13 12:26:54 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module TestAndUnit8 $end
+$var wire 8 ! C [7:0] $end
+$var reg 8 " A [7:0] $end
+$var reg 8 # B [7:0] $end
+$scope module andUnit8 $end
+$var wire 8 $ A [7:0] $end
+$var wire 8 % B [7:0] $end
+$var wire 8 & C [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 &
+b0 %
+b1 $
+b0 #
+b1 "
+b0 !
+$end
+#5
+b1010 #
+b1010 %
+b11010100 "
+b11010100 $
+#10
+b1011 !
+b1011 &
+b1011 #
+b1011 %
+b1111 "
+b1111 $
+#15

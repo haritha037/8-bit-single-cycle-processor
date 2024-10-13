@@ -1,0 +1,62 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001e75a1fbd70 .scope module, "TestOrUnit8" "TestOrUnit8" 2 10;
+ .timescale 0 0;
+v000001e75a1fab30_0 .var/s "A", 7 0;
+v000001e75a0e56e0_0 .var/s "B", 7 0;
+v000001e75a0e5780_0 .net/s "C", 7 0, L_000001e75a0b30c0;  1 drivers
+S_000001e75a0e5550 .scope module, "orUnit8" "OrUnit8" 2 14, 2 1 0, S_000001e75a1fbd70;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "A";
+    .port_info 1 /INPUT 8 "B";
+    .port_info 2 /OUTPUT 8 "C";
+L_000001e75a0b30c0 .functor OR 8, v000001e75a1fab30_0, v000001e75a0e56e0_0, C4<00000000>, C4<00000000>;
+v000001e75a1fbf00_0 .net/s "A", 7 0, v000001e75a1fab30_0;  1 drivers
+v000001e75a0b2b70_0 .net/s "B", 7 0, v000001e75a0e56e0_0;  1 drivers
+v000001e75a1faa90_0 .net/s "C", 7 0, L_000001e75a0b30c0;  alias, 1 drivers
+    .scope S_000001e75a1fbd70;
+T_0 ;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v000001e75a1fab30_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v000001e75a0e56e0_0, 0, 8;
+    %delay 5, 0;
+    %pushi/vec4 212, 0, 8;
+    %store/vec4 v000001e75a1fab30_0, 0, 8;
+    %pushi/vec4 10, 0, 8;
+    %store/vec4 v000001e75a0e56e0_0, 0, 8;
+    %delay 5, 0;
+    %pushi/vec4 15, 0, 8;
+    %store/vec4 v000001e75a1fab30_0, 0, 8;
+    %pushi/vec4 11, 0, 8;
+    %store/vec4 v000001e75a0e56e0_0, 0, 8;
+    %delay 5, 0;
+    %vpi_call 2 30 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_000001e75a1fbd70;
+T_1 ;
+    %vpi_call 2 36 "$dumpfile", "OrUnit8.vcd" {0 0 0};
+    %vpi_call 2 37 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001e75a1fbd70 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_000001e75a1fbd70;
+T_2 ;
+    %vpi_call 2 43 "$display" {0 0 0};
+    %vpi_call 2 44 "$display", "********************TEST OrUnit8********************" {0 0 0};
+    %vpi_call 2 45 "$display", "  A   B   C" {0 0 0};
+    %vpi_call 2 46 "$monitor", "%3d %3d %3d", v000001e75a1fab30_0, v000001e75a0e56e0_0, v000001e75a0e5780_0 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "OrUnit8.v";
