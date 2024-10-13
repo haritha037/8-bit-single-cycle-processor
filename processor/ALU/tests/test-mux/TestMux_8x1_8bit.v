@@ -19,16 +19,16 @@ module TestMux_8x1_8bit;
   //   Y
   // );
   Mux_8x1_8bit mux_8x1_8bit (
-    .I0(I0),    // Positional style mapping for inputs
+    .I0(I0),    
     .I1(I1),
     .I2(I2),
     .I3(I3),
-    .I4(8'b00000000), // Unused input I4 is tied to 0
-    .I5(8'b00000000), // Unused input I5 is tied to 0
-    .I6(8'b00000000), // Unused input I6 is tied to 0
-    .I7(8'b00000000), // Unused input I7 is tied to 0
-    .S(S),       // Positional style mapping for select lines
-    .Y(Y)        // Positional style mapping for output
+    .I4(8'bxxxxxxxx), // Unused input I4 is tied to x
+    .I5(8'bxxxxxxxx), // Unused input I5 is tied to x
+    .I6(8'bxxxxxxxx), // Unused input I6 is tied to x
+    .I7(8'bxxxxxxxx), // Unused input I7 is tied to x
+    .S(S),       
+    .Y(Y)        
 );
 
   // test
