@@ -1,0 +1,53 @@
+$date
+	Sun Oct 13 21:19:33 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module TestForward $end
+$var wire 8 ! result [7:0] $end
+$var reg 8 " data2 [7:0] $end
+$scope module forward $end
+$var wire 8 # data2 [7:0] $end
+$var wire 8 $ result [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx $
+bx #
+bx "
+bx !
+$end
+#3
+b11001 "
+b11001 #
+#4
+b11001 !
+b11001 $
+#6
+b0 "
+b0 #
+#7
+b0 !
+b0 $
+#9
+b1 "
+b1 #
+#10
+b1 !
+b1 $
+#12
+b100010 "
+b100010 #
+#13
+b100010 !
+b100010 $
+#17

@@ -1,0 +1,62 @@
+$date
+	Sun Oct 13 21:24:54 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module TestAdd $end
+$var wire 8 ! result [7:0] $end
+$var reg 8 " data1 [7:0] $end
+$var reg 8 # data2 [7:0] $end
+$scope module add $end
+$var wire 8 $ data1 [7:0] $end
+$var wire 8 % data2 [7:0] $end
+$var wire 8 & result [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx &
+bx %
+bx $
+bx #
+bx "
+bx !
+$end
+#2
+b11 #
+b11 %
+b11001 "
+b11001 $
+#4
+b11100 !
+b11100 &
+#5
+b1000 #
+b1000 %
+b1 "
+b1 $
+#6
+b11111011 #
+b11111011 %
+b10 "
+b10 $
+#8
+b11111101 !
+b11111101 &
+#10
+b11111110 #
+b11111110 %
+b110 "
+b110 $
+#12
+b100 !
+b100 &
+#15

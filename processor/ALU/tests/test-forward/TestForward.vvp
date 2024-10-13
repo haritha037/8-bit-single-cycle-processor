@@ -1,0 +1,59 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000019db711a220 .scope module, "TestForward" "TestForward" 2 4;
+ .timescale 0 0;
+v0000019db7163cd0_0 .var "data2", 7 0;
+v0000019db7163d70_0 .net "result", 7 0, L_0000019db7165840;  1 drivers
+S_0000019db711ed80 .scope module, "forward" "Forward" 2 8, 3 1 0, S_0000019db711a220;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "data2";
+    .port_info 1 /OUTPUT 8 "result";
+L_0000019db7165840/d .functor BUFZ 8, v0000019db7163cd0_0, C4<00000000>, C4<00000000>, C4<00000000>;
+L_0000019db7165840 .delay 8 (1,1,1) L_0000019db7165840/d;
+v0000019db711ef10_0 .net "data2", 7 0, v0000019db7163cd0_0;  1 drivers
+v0000019db7163eb0_0 .net "result", 7 0, L_0000019db7165840;  alias, 1 drivers
+    .scope S_0000019db711a220;
+T_0 ;
+    %delay 3, 0;
+    %pushi/vec4 25, 0, 8;
+    %store/vec4 v0000019db7163cd0_0, 0, 8;
+    %delay 3, 0;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0000019db7163cd0_0, 0, 8;
+    %delay 3, 0;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v0000019db7163cd0_0, 0, 8;
+    %delay 3, 0;
+    %pushi/vec4 34, 0, 8;
+    %store/vec4 v0000019db7163cd0_0, 0, 8;
+    %delay 5, 0;
+    %vpi_call 2 25 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0000019db711a220;
+T_1 ;
+    %vpi_call 2 31 "$dumpfile", "TestForward.vcd" {0 0 0};
+    %vpi_call 2 32 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000019db711a220 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_0000019db711a220;
+T_2 ;
+    %vpi_call 2 37 "$display" {0 0 0};
+    %vpi_call 2 38 "$display", "********************  TEST Forward  ********************" {0 0 0};
+    %vpi_call 2 39 "$display", "\011time\011data2\011result" {0 0 0};
+    %vpi_call 2 40 "$monitor", "\011%3t\011%d\011%d", $time, v0000019db7163cd0_0, v0000019db7163d70_0 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "TestForward.v";
+    "./../../units/Forward.v";
