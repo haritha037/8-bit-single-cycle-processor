@@ -1,5 +1,5 @@
 $date
-	Sun Oct 13 12:16:10 2024
+	Sun Oct 13 15:05:29 2024
 $end
 $version
 	Icarus Verilog
@@ -7,11 +7,11 @@ $end
 $timescale
 	1s
 $end
-$scope module Task1 $end
+$scope module TestOrUnit8bit $end
 $var wire 8 ! C [7:0] $end
 $var reg 8 " A [7:0] $end
 $var reg 8 # B [7:0] $end
-$scope module orUnit $end
+$scope module orUnit8 $end
 $var wire 8 $ A [7:0] $end
 $var wire 8 % B [7:0] $end
 $var wire 8 & C [7:0] $end

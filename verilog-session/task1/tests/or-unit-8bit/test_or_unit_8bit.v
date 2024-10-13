@@ -1,17 +1,10 @@
-module OrUnit8(A, B, C);
-  input signed [7:0] A, B;
-  output signed [7:0] C;
+`include "../../units/or-unit-8bit/OrUnit8.v"
 
-  assign C = A | B;
-endmodule
-
-
-// test
-module TestOrUnit8;
+module TestOrUnit8bit;
  // implement the circuit
   reg signed [7:0] A, B;
   wire signed [7:0] C;
-  
+
   OrUnit8 orUnit8(A, B, C);
 
   // test
@@ -34,8 +27,8 @@ module TestOrUnit8;
 
   // gtkWave
   initial begin 
-    $dumpfile("OrUnit8.vcd");
-    $dumpvars(0, TestOrUnit8);
+    $dumpfile("test_or_unit_8bit.vcd");
+    $dumpvars(0, TestOrUnit8bit);
   end
 
 
