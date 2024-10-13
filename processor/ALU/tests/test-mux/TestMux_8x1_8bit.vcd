@@ -1,0 +1,86 @@
+$date
+	Sun Oct 13 20:23:16 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module TestMux_8x1_8bit $end
+$var wire 8 ! Y [7:0] $end
+$var reg 8 " I0 [7:0] $end
+$var reg 8 # I1 [7:0] $end
+$var reg 8 $ I2 [7:0] $end
+$var reg 8 % I3 [7:0] $end
+$var reg 3 & S [2:0] $end
+$scope module mux_8x1_8bit $end
+$var wire 8 ' I0 [7:0] $end
+$var wire 8 ( I1 [7:0] $end
+$var wire 8 ) I2 [7:0] $end
+$var wire 8 * I3 [7:0] $end
+$var wire 8 + I4 [7:0] $end
+$var wire 8 , I5 [7:0] $end
+$var wire 8 - I6 [7:0] $end
+$var wire 8 . I7 [7:0] $end
+$var wire 3 / S [2:0] $end
+$var reg 8 0 Y [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx 0
+bx /
+b0 .
+b0 -
+b0 ,
+b0 +
+bx *
+bx )
+bx (
+bx '
+bx &
+bx %
+bx $
+bx #
+bx "
+bx !
+$end
+#1
+b1100 !
+b1100 0
+b0 &
+b0 /
+b1 %
+b1 *
+b101 $
+b101 )
+b10 #
+b10 (
+b1100 "
+b1100 '
+#2
+b10 !
+b10 0
+b1 &
+b1 /
+#3
+b101 !
+b101 0
+b10 &
+b10 /
+#4
+b1 !
+b1 0
+b11 &
+b11 /
+#5
+b1010 !
+b1010 0
+b1010 %
+b1010 *
+#10
