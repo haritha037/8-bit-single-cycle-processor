@@ -1,5 +1,5 @@
 $date
-	Sun Oct 13 20:23:16 2024
+	Sun Oct 13 22:03:06 2024
 $end
 $version
 	Icarus Verilog
@@ -35,10 +35,10 @@ $end
 $dumpvars
 bx 0
 bx /
-b0 .
-b0 -
-b0 ,
-b0 +
+bx .
+bx -
+bx ,
+bx +
 bx *
 bx )
 bx (
