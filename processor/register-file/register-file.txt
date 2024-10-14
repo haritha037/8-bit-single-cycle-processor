@@ -1,0 +1,14 @@
+8x8 register file - 8 registers with 8 bits(r0 - r7)
+
+Purpose:
+  1. Supply ALU operands
+  2. Store output value of the ALU
+
+Reading - asynchronous
+Writing - synchronous (wirte=1, + clk edge, dataIn -> inAddress register)
+Reseting - synchronous (reset=1, + clk edge, all the registers -> 0)
+
+Delays:
+  read - #2
+  write - #1
+  reset - #1 (same as writing 0)
