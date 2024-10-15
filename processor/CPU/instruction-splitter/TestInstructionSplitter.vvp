@@ -1,0 +1,77 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001f67b6b6d40 .scope module, "TestInstructionSplitter" "TestInstructionSplitter" 2 3;
+ .timescale 0 0;
+v000001f67b6c3880_0 .net "immediate", 7 0, L_000001f67b6c3e20;  1 drivers
+v000001f67b6c3740_0 .var "instruction", 31 0;
+v000001f67b6c4460_0 .net "opcode", 7 0, L_000001f67b6c3560;  1 drivers
+v000001f67b6c3ce0_0 .net "readReg1", 7 0, L_000001f67b6c3a60;  1 drivers
+v000001f67b6c39c0_0 .net "readReg2", 7 0, L_000001f67b6c40a0;  1 drivers
+v000001f67b6c3600_0 .net "writeReg", 7 0, L_000001f67b6c37e0;  1 drivers
+S_000001f67b6b93b0 .scope module, "splitter" "InstructionSplitter" 2 8, 3 1 0, S_000001f67b6b6d40;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "instruction";
+    .port_info 1 /OUTPUT 8 "opcode";
+    .port_info 2 /OUTPUT 8 "writeReg";
+    .port_info 3 /OUTPUT 8 "readReg1";
+    .port_info 4 /OUTPUT 8 "readReg2";
+    .port_info 5 /OUTPUT 8 "immediate";
+L_000001f67b710070 .functor BUFT 1, C4<00000>, C4<0>, C4<0>, C4<0>;
+v000001f67b67b620_0 .net *"_ivl_13", 4 0, L_000001f67b710070;  1 drivers
+v000001f67b6b9b10_0 .net *"_ivl_15", 2 0, L_000001f67b6c3b00;  1 drivers
+L_000001f67b7100b8 .functor BUFT 1, C4<00000>, C4<0>, C4<0>, C4<0>;
+v000001f67b6b6ed0_0 .net *"_ivl_19", 4 0, L_000001f67b7100b8;  1 drivers
+v000001f67b6b6f70_0 .net *"_ivl_3", 2 0, L_000001f67b6c3ba0;  1 drivers
+L_000001f67b710028 .functor BUFT 1, C4<00000>, C4<0>, C4<0>, C4<0>;
+v000001f67b6b9540_0 .net *"_ivl_7", 4 0, L_000001f67b710028;  1 drivers
+v000001f67b6b95e0_0 .net *"_ivl_9", 2 0, L_000001f67b6c36a0;  1 drivers
+v000001f67b6b9680_0 .net "immediate", 7 0, L_000001f67b6c3e20;  alias, 1 drivers
+v000001f67b6927b0_0 .net "instruction", 31 0, v000001f67b6c3740_0;  1 drivers
+v000001f67b6c3920_0 .net "opcode", 7 0, L_000001f67b6c3560;  alias, 1 drivers
+v000001f67b6c3d80_0 .net "readReg1", 7 0, L_000001f67b6c3a60;  alias, 1 drivers
+v000001f67b6c3f60_0 .net "readReg2", 7 0, L_000001f67b6c40a0;  alias, 1 drivers
+v000001f67b6c43c0_0 .net "writeReg", 7 0, L_000001f67b6c37e0;  alias, 1 drivers
+L_000001f67b6c3560 .part v000001f67b6c3740_0, 24, 8;
+L_000001f67b6c3ba0 .part v000001f67b6c3740_0, 16, 3;
+L_000001f67b6c37e0 .concat [ 3 5 0 0], L_000001f67b6c3ba0, L_000001f67b710028;
+L_000001f67b6c36a0 .part v000001f67b6c3740_0, 8, 3;
+L_000001f67b6c3a60 .concat [ 3 5 0 0], L_000001f67b6c36a0, L_000001f67b710070;
+L_000001f67b6c3b00 .part v000001f67b6c3740_0, 0, 3;
+L_000001f67b6c40a0 .concat [ 3 5 0 0], L_000001f67b6c3b00, L_000001f67b7100b8;
+L_000001f67b6c3e20 .part v000001f67b6c3740_0, 0, 8;
+    .scope S_000001f67b6b6d40;
+T_0 ;
+    %delay 1, 0;
+    %pushi/vec4 305419896, 0, 32;
+    %store/vec4 v000001f67b6c3740_0, 0, 32;
+    %delay 5, 0;
+    %vpi_call 2 14 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_000001f67b6b6d40;
+T_1 ;
+    %vpi_call 2 20 "$dumpfile", "TestInstructionSplitter.vcd" {0 0 0};
+    %vpi_call 2 21 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001f67b6b6d40 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_000001f67b6b6d40;
+T_2 ;
+    %vpi_call 2 26 "$display" {0 0 0};
+    %vpi_call 2 27 "$display", "********************  Test InstructionSplitter  ********************" {0 0 0};
+    %vpi_call 2 28 "$display", "\011time\011instruction\011opcode\011writeReg\011readReg1\011readReg2\011immediate" {0 0 0};
+    %vpi_call 2 29 "$monitor", "\011%4t\011%11h\011%6h\011%8h\011%8h\011%8h\011%9h", $time, v000001f67b6c3740_0, v000001f67b6c4460_0, v000001f67b6c3600_0, v000001f67b6c3ce0_0, v000001f67b6c39c0_0, v000001f67b6c3880_0 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "TestInstructionSplitter.v";
+    "./InstructionSplitter.v";

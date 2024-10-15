@@ -1,0 +1,80 @@
+$date
+	Tue Oct 15 19:08:27 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module TestControlUnit $end
+$var wire 1 ! regWriteEnable $end
+$var wire 1 " negate $end
+$var wire 3 # aluop [2:0] $end
+$var wire 1 $ aluSource $end
+$var reg 8 % opcode [7:0] $end
+$scope module controlUnit $end
+$var wire 8 & opcode [7:0] $end
+$var reg 1 $ aluSource $end
+$var reg 3 ' aluop [2:0] $end
+$var reg 1 " negate $end
+$var reg 1 ! regWriteEnable $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx '
+bx &
+bx %
+x$
+bx #
+x"
+x!
+$end
+#5
+b0 %
+b0 &
+#6
+1!
+0$
+b0 #
+b0 '
+#10
+b1 %
+b1 &
+#11
+0"
+1$
+b1 #
+b1 '
+#15
+b10 %
+b10 &
+#16
+b0 #
+b0 '
+#20
+b11 %
+b11 &
+#21
+1"
+b1 #
+b1 '
+#25
+b100 %
+b100 &
+#26
+0"
+b10 #
+b10 '
+#30
+b101 %
+b101 &
+#31
+b11 #
+b11 '
+#35
