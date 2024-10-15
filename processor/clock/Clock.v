@@ -4,7 +4,7 @@ module Clock(clk);
   initial begin
     clk = 1;
     forever begin
-      #5 clk = ~clk;
+      #8 clk = ~clk;
     end
   end
 endmodule
