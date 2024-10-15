@@ -1,0 +1,53 @@
+$date
+	Tue Oct 15 14:59:06 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module TestNegator $end
+$var wire 8 ! out [7:0] $end
+$var reg 8 " in [7:0] $end
+$scope module negator $end
+$var wire 8 # in [7:0] $end
+$var wire 8 $ out [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx $
+bx #
+bx "
+bx !
+$end
+#4
+b101101 "
+b101101 #
+#5
+b11010011 !
+b11010011 $
+#8
+b10100 "
+b10100 #
+#9
+b11101100 !
+b11101100 $
+#12
+b11111101 "
+b11111101 #
+#13
+b11 !
+b11 $
+#16
+b11010000 "
+b11010000 #
+#17
+b110000 !
+b110000 $
+#21
