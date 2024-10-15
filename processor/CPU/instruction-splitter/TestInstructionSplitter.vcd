@@ -1,0 +1,58 @@
+$date
+	Tue Oct 15 15:21:37 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module TestInstructionSplitter $end
+$var wire 8 ! writeReg [7:0] $end
+$var wire 8 " readReg2 [7:0] $end
+$var wire 8 # readReg1 [7:0] $end
+$var wire 8 $ opcode [7:0] $end
+$var wire 8 % immediate [7:0] $end
+$var reg 32 & instruction [31:0] $end
+$scope module splitter $end
+$var wire 32 ' instruction [31:0] $end
+$var wire 8 ( writeReg [7:0] $end
+$var wire 8 ) readReg2 [7:0] $end
+$var wire 8 * readReg1 [7:0] $end
+$var wire 8 + opcode [7:0] $end
+$var wire 8 , immediate [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx ,
+bx +
+b0xxx *
+b0xxx )
+b0xxx (
+bx '
+bx &
+bx %
+bx $
+b0xxx #
+b0xxx "
+b0xxx !
+$end
+#1
+b10010 $
+b10010 +
+b100 !
+b100 (
+b110 #
+b110 *
+b0 "
+b0 )
+b1111000 %
+b1111000 ,
+b10010001101000101011001111000 &
+b10010001101000101011001111000 '
+#6
