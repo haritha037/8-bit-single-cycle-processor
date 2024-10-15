@@ -1,6 +1,7 @@
 module InstructionSplitter(instruction, opcode, writeReg, readReg1, readReg2, immediate);
   input [31:0] instruction;
-  output [7:0] opcode, writeReg, readReg1, readReg2, immediate;
+  output [7:0] opcode, immediate;
+  output [2:0] writeReg, readReg1, readReg2;
 
   assign opcode = instruction[31:24];
   assign writeReg = instruction[18:16]; // 8 bits are allocated but register file uses 3
